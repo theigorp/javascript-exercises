@@ -1,18 +1,16 @@
 const reverseString = function(string) {
-    let reversed = [];
+    let stringCharacters;
 
-    const letterByLetter = string.split('');
+    stringCharacters = string.split('');
+    stringCharacters = stringCharacters.reverse();
+    stringCharacters = stringCharacters.join('');
+    return stringCharacters
 
-    for(let i = 0; i < string.length; i++)
-    {
-        reversed[i] = letterByLetter[letterByLetter.length - 1 - i];
-    }
 
-    const complete = reversed.join('');
-
-    return complete;
 
 };
+
+reverseString('hello');
 
 // Do not edit below this line
 module.exports = reverseString;
